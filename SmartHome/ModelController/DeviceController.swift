@@ -26,6 +26,12 @@ class DeviceController {
         save()
         
     }
+    func delete(deviceToDelete: Device){
+        guard let index = devices.firstIndex(of: deviceToDelete) else {return}
+        devices.remove(at: index)
+        save()
+        
+    }
     func toggleButtonSwitched(whatDevice: Device) {
         whatDevice.isOn.toggle()
         save()
