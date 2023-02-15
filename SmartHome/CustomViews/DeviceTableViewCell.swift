@@ -14,5 +14,23 @@ class DeviceTableViewCell: UITableViewCell {
         
     }
 
- 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var deviceNameLabel: UILabel!
+    
+    @IBOutlet weak var deviceToggleSwitch: UISwitch!
+    
+    // MARK: - Helper FUNCTIONS
+    func updateViews(device: Device) {
+        deviceNameLabel.text = device.name
+        deviceToggleSwitch.isOn = device.isOn
+    }
+    
+    
+    
+    // MARK: - Actions
+    
+    @IBAction func deviceToggled(_ sender: Any) {
+    }
+    
 }

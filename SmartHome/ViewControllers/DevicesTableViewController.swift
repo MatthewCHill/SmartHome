@@ -27,7 +27,8 @@ class DevicesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else {return UITableViewCell()}
         let device = DeviceController.shared.devices[indexPath.row]
-
+        cell.updateViews(device: device)
+        
         // Configure the cell...
 
         return cell
@@ -63,10 +64,4 @@ class DevicesTableViewController: UITableViewController {
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
     }
-    
-    
-    
-    
-    
-
 }

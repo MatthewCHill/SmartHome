@@ -35,6 +35,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TeX-lR-9Uz">
                                                     <rect key="frame" x="309" y="0.0" width="51" height="22"/>
+                                                    <connections>
+                                                        <action selector="deviceToggled:" destination="Ck8-bp-MDF" eventType="valueChanged" id="Vz7-iY-rVW"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -46,6 +49,10 @@
                                         <constraint firstItem="bbT-G7-IyJ" firstAttribute="top" secondItem="Z6l-wD-lr9" secondAttribute="topMargin" constant="8" id="ysO-63-vCB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceNameLabel" destination="tTG-L6-YJl" id="RUw-5P-aFQ"/>
+                                    <outlet property="deviceToggleSwitch" destination="TeX-lR-9Uz" id="UJp-E2-avU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
