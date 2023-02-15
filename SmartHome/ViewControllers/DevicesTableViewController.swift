@@ -13,7 +13,13 @@ class DevicesTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func addDeviceButtonTapped(_ sender: Any) {
+        presentNewDeviceAlertController()
+    }
+    
     // MARK: - Table view data source
 
 
@@ -29,6 +35,7 @@ class DevicesTableViewController: UITableViewController {
         let device = DeviceController.shared.devices[indexPath.row]
         cell.updateViews(device: device)
         
+        cell.delegate = self
         // Configure the cell...
 
         return cell
@@ -64,4 +71,15 @@ class DevicesTableViewController: UITableViewController {
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
     }
+}
+
+extension DevicesTableViewController: DeviceTableViewCellDelegate {
+    func isOnSwitchToggled(cell: DeviceTableViewCell) {
+        guard let index = tableView.indexPath(for: cell) else {return}
+        let device = DeviceController.shared.devices[index.row]
+        DeviceController.shared.toggleButtonSwitched(whatDevice: device)
+        cell.updateViews(device: device)
+    }
+    
+    
 }

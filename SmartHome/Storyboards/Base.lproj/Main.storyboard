@@ -61,7 +61,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Smart Home" id="UJ7-4x-htW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VID-qf-B1O"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VID-qf-B1O">
+                            <connections>
+                                <action selector="addDeviceButtonTapped:" destination="Y5y-Cs-MD0" id="VaE-0j-43c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="949-oM-2Sg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
