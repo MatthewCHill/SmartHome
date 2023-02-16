@@ -11,6 +11,7 @@
 		34794495299D71B500F05854 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34794494299D71B500F05854 /* DeviceController.swift */; };
 		34794498299D751100F05854 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34794497299D751100F05854 /* DevicesTableViewController.swift */; };
 		3479449B299D75DA00F05854 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479449A299D75DA00F05854 /* DeviceTableViewCell.swift */; };
+		34872DF1299EC9B800C48F6F /* ToggleAllDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34872DF0299EC9B800C48F6F /* ToggleAllDevicesViewController.swift */; };
 		F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F027729ACE0021C4E0 /* AppDelegate.swift */; };
 		F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */; };
 		F78B15F827729ACE0021C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F627729ACE0021C4E0 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		34794494299D71B500F05854 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 		34794497299D751100F05854 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		3479449A299D75DA00F05854 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		34872DF0299EC9B800C48F6F /* ToggleAllDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllDevicesViewController.swift; sourceTree = "<group>"; };
 		F78B15ED27729ACE0021C4E0 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78B15F027729ACE0021C4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				34794497299D751100F05854 /* DevicesTableViewController.swift */,
+				34872DF0299EC9B800C48F6F /* ToggleAllDevicesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				34794492299D70C100F05854 /* Device.swift in Sources */,
 				3479449B299D75DA00F05854 /* DeviceTableViewCell.swift in Sources */,
+				34872DF1299EC9B800C48F6F /* ToggleAllDevicesViewController.swift in Sources */,
 				34794495299D71B500F05854 /* DeviceController.swift in Sources */,
 				34794498299D751100F05854 /* DevicesTableViewController.swift in Sources */,
 				F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */,
