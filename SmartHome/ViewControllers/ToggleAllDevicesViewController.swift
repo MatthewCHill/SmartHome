@@ -9,21 +9,14 @@ import UIKit
 
 class ToggleAllDevicesViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+// MARK: - Actions
+    
+    @IBAction func turnAllDevicesOn(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name(Constants.Notifications.turnAllOn), object: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func turnAllDevicesOff(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name(Constants.Notifications.turnAllOff), object: nil)
     }
-    */
-
 }

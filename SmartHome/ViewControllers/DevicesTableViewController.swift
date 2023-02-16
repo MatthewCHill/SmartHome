@@ -11,7 +11,8 @@ class DevicesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpNotifications()
+        
     }
     
     // MARK: - Actions
@@ -52,6 +53,19 @@ class DevicesTableViewController: UITableViewController {
             DeviceController.shared.delete(deviceToDelete: device)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    func setUpNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(turnDevicesAllOn), name: Notification.Name(Constants.Notifications.turnAllOn), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnDevicesAllOff), name: Notification.Name(Constants.Notifications.turnAllOff), object: nil)
+        
+    }
+    @objc func turnDevicesAllOn() {
+        DeviceController.shared.toggleAllDevicesOn(on: true)
+        tableView.reloadData()
+    }
+    @objc func turnDevicesAllOff() {
+        DeviceController.shared.toggleAllDevicesOn(on: false)
+        tableView.reloadData()
     }
     
 

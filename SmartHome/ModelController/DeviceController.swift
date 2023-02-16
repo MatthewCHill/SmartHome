@@ -36,6 +36,10 @@ class DeviceController {
         whatDevice.isOn.toggle()
         save()
     }
+    func toggleAllDevicesOn(on: Bool) {
+        devices.forEach { $0.isOn = on }
+        save()
+    }
     
     // MARK: - Persistence
     private var fileURL: URL? {
